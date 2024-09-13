@@ -5,7 +5,7 @@ import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 import { FC } from 'react';
 
-interface ICardProps {
+type ICardProps = {
   id: number;
   title: string;
   route: string;
@@ -35,7 +35,7 @@ const Card: FC<CardProps> = ({ cards }) => {
       {cards.map((card) => (
         <Grid item xs={12} sm={6} md={4} key={card.id}>
           <Stack direction="row" className="card">
-            <PaperCustom>{card.title}</PaperCustom>
+            <PaperCustom elevation={3}>{card.title}</PaperCustom>
           </Stack>
         </Grid>
       ))}
